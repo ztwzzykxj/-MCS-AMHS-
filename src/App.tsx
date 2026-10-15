@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router";
 import { ScrollToTop } from "./components/common/ScrollToTop";
+import AIAssistant from "./components/common/AIAssistant";
 import AppLayout from "./layout/AppLayout";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
@@ -24,6 +25,7 @@ export default function App() {
     <>
       <Router>
         <ScrollToTop />
+        <AIAssistant />
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>

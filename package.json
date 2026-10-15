@@ -7,7 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/pages/smoke.spec.ts",
+    "test:auth": "playwright test tests/pages/auth.spec.ts",
+    "test:dashboard": "playwright test tests/pages/dashboard.spec.ts",
+    "test:ai": "playwright test tests/components/ai-assistant.spec.ts",
+    "test:report": "playwright show-report",
+    "test:headed": "playwright test --headed"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.20",
@@ -38,6 +45,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
     "@types/jsvectormap": "^1.7.0",
