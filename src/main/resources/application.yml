@@ -52,3 +52,12 @@ secure:
       - /admin/register
       - /admin/info
       - /admin/logout
+      - /ai/info
+
+# DeepSeek AI 配置
+deepseek:
+  api-key: your-api-key-here  # 请替换为你的 DeepSeek API Key
+  base-url: https://api.deepseek.com
+  model: deepseek-chat
+  max-tokens: 1000
+  temperature: 0.7
