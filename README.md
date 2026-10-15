@@ -1,226 +1,111 @@
-# TailAdmin React - Free React Tailwind Admin Dashboard Template
+# MCS-AMHS 前端
 
-TailAdmin is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers
-with everything they need to create a comprehensive, data-driven back-end,
-dashboard, or admin panel solution for upcoming web projects.
+> 村田机械 MCS-AMHS 车间设备运行状态与仓储库存预警管理系统 - 前端部分
 
-With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a
-feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web
-application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38B2AC?logo=tailwindcss)
 
-![TailAdmin React.js Dashboard Preview](./banner.png)
+## 项目简介
 
-## Overview
+本项目是**村田机械 MCS-AMHS 系统**的前端部分，用于展示车间设备运行状态监控和仓储库存预警功能。
 
-TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and
-control panels. It's built on:
+基于 [TailAdmin](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard) 免费模板开发。
 
-- React 19
-- TypeScript
-- Tailwind CSS v4
+## 功能特性
 
-### Quick Links
+- 📊 **设备状态看板** - 实时展示设备总数、运行中、空闲、故障等状态
+- 📈 **设备运行趋势图** - Canvas 绘制的 24 小时设备状态变化曲线
+- ⚠️ **仓储库存预警** - 显示库存不足的物料及紧急程度
+- 📋 **设备实时状态表** - 设备详细信息列表（温度、功率、效率等）
+- 🔐 **用户认证** - 对接后端 API 实现登录功能
+- 🌐 **国际化支持** - 中文界面
 
-- [✨ Visit Website](https://tailadmin.com)
-- [📄 Documentation](https://tailadmin.com/docs)
-- [⬇️ Download](https://tailadmin.com/download)
-- [🖌️ Figma Design File (Community Edition)](https://www.figma.com/community/file/1214477970819985778)
-- [⚡ Get PRO Version](https://tailadmin.com/pricing)
+## 技术栈
 
-### Demos
+- **框架**: React 19
+- **语言**: TypeScript
+- **样式**: Tailwind CSS v4
+- **构建工具**: Vite
+- **路由**: React Router
+- **国际化**: i18next
+- **图表**: Canvas 自定义绘制
 
-- [Free Version](https://free-react-demo.tailadmin.com/)
-- [Pro Version](https://react-demo.tailadmin.com)
+## 快速开始
 
-### Other Versions
+### 环境要求
 
-- [HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
-- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
-- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
-- [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
-- [Laravel Version](https://github.com/TailAdmin/tailadmin-laravel)
+- Node.js 20.x 或更高版本
+- npm 或 yarn
 
-## Installation
-
-### Prerequisites
-
-To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
-
-- Node.js 20.x or later
-
-### Cloning the Repository
-
-Clone the repository using the following command:
+### 安装依赖
 
 ```bash
-git clone https://github.com/TailAdmin/free-react-tailwind-admin-dashboard.git
+npm install
+# 或
+yarn install
 ```
 
-> Windows Users: place the repository near the root of your drive if you face issues while cloning.
+### 启动开发服务器
 
-1. Install dependencies:
+```bash
+npm run dev
+# 或
+yarn dev
+```
 
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
+访问 http://localhost:5173
 
-2. Start the development server:
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    ```
+### 构建生产版本
 
-## Components
+```bash
+npm run build
+# 或
+yarn build
+```
 
-TailAdmin is a pre-designed starting point for building a web-based dashboard using React.js and Tailwind CSS. The
-template includes:
+## 测试账号
 
-- Sophisticated and accessible sidebar
-- Data visualization components
-- Prebuilt profile management and 404 page
-- Tables and Charts(Line and Bar)
-- Authentication forms and input elements
-- Alerts, Dropdowns, Modals, Buttons and more
-- FAQ & Accordion, Testimonials, and Carousels
-- Can't forget Dark Mode 🕶️
+- 用户名: `testuser`
+- 密码: `123456`
 
-All components are built with React and styled using Tailwind CSS for easy customization.
+## 项目结构
 
-## Feature Comparison
+```
+src/
+├── components/
+│   └── ecommerce/          # 设备看板相关组件
+│       ├── EquipmentList.tsx
+│       ├── EquipmentMetrics.tsx
+│       ├── EquipmentStatusChart.tsx
+│       └── InventoryWarning.tsx
+├── pages/
+│   └── Dashboard/
+│       └── Ecommerce.tsx   # 监控中心主页面
+├── services/
+│   └── api.ts              # API 服务层
+├── types/
+│   └── api.ts              # API 类型定义
+├── layout/                 # 布局组件
+├── locales/                # 国际化语言包
+└── icons/                  # SVG 图标
+```
 
-### Free Version
+## 相关项目
 
-- 1 Unique Dashboard
-- 35+ dashboard components
-- 50+ UI elements
-- Basic Figma design files
-- Community support
+- **后端**: [MCS-AMHS Backend](https://github.com/ztwzzykxj/-MCS-AMHS-/tree/backend)
 
-### Pro Version
+## 实习项目任务书
 
-- 7 Unique Dashboards: Analytics, Ecommerce, Marketing, CRM, SaaS, Stocks, Logistics (more coming soon)
-- 500+ dashboard components and UI elements
-- Complete Figma design file
-- Email support
+本项目是为**天津卓信软件开发有限公司**完成的实习任务：
 
-To learn more about pro version features and pricing, visit our [pricing page](https://tailadmin.com/pricing).
-
-## Changelog
-
-### Version 2.4.0 - [September 13, 2026]
-
-- Added Internationalization (Multi Language) support.
-- Updated complete template styles to support RTL.
-- Added Yearly View into calendar page.
-- Updated `maplibre-gl` implementation with `react-map-gl`.
-- Replaced `@react-jvectormap` with `jsvectormap`.
-- Added new requested components and fixed noted accessibility issues.
-- Updated project structure and component compositions for easy adaption.
-- Added AGENTS.md to easily work with AI Agents.
-- Updated all the packages and libraries to the latest versions. Also removed unused packages.
-
-### Version 2.3.1 - [May 23, 2026]
-
-- Added AI Settings page to configure models, keys, and token limits.
-- Added Maps page with MapLibre GL, Leaflet, and iframe styles.
-- Added Vector Maps page powered by AmCharts 5 geodata (World & USA).
-- Added Radar Charts page with 3 unique formats.
-- Added Radial Progress Charts page featuring 4 custom layout templates.
-- Introduced new Bar Charts Five & Six and Pie Charts Four & Five.
-
-### Version 2.3.0 - [April 28, 2026]
-
-- Added **AI Dashboard** with token usage and revenue tracking.
-- Added **Sales Dashboard** with retention and multi-channel analytics.
-- Added **Finance Dashboard** with cashflow and balance management.
-- Introduced **6 New Layout variations** for improved UI flexibility.
-- Integrated **Advanced Data Visualization** with 7+ new chart types.
-
-### Version 2.1.0 - [Dec 30, 2025]
-
-- Resolved Date Picker positioning and input issues in Charts.
-
-### Version 2.0.2 - [March 25, 2025]
-
-- Upgraded to React 19
-- Included overrides for packages to prevent peer dependency errors.
-- Migrated from react-flatpickr to flatpickr package for React 19 support
-
-### Version 2.0.1 - [February 27, 2025]
-
-#### Update Overview
-
-- Upgraded to Tailwind CSS v4 for better performance and efficiency.
-- Updated class usage to match the latest syntax and features.
-- Replaced deprecated class and optimized styles.
-
-#### Next Steps
-
-- Run npm install or yarn install to update dependencies.
-- Check for any style changes or compatibility issues.
-- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
-- This update keeps the project up to date with the latest Tailwind improvements. 🚀
-
-### Version 2.0.0 - [February 2025]
-
-A major update with comprehensive redesign and modern React patterns implementation.
-
-#### Major Improvements
-
-- Complete UI redesign with modern React patterns
-- New features: collapsible sidebar, chat, and calendar
-- Improved performance and accessibility
-- Updated data visualization using ApexCharts
-
-#### Key Features
-
-- Redesigned dashboards (Ecommerce, Analytics, Marketing, CRM)
-- Enhanced navigation with React Router integration
-- Advanced tables with sorting and filtering
-- Calendar with drag-and-drop support
-- New UI components and improved existing ones
-
-#### Breaking Changes
-
-- Updated sidebar component API
-- Migrated charts to ApexCharts
-- Revised authentication system
-
-[Read more](https://tailadmin.com/docs/update-logs/react) on this release.
-
-### Version 1.3.7 - [June 20, 2024]
-
-#### Enhancements
-
-1. Remove Repetition of DefaultLayout in every Pages
-2. Add ClickOutside Component for reduce repeated functionality in Header Message, Notification and User Dropdowns.
-
-### Version 1.3.6 - [Jan 31, 2024]
-
-#### Enhancements
-
-1. Integrate flatpickr in [Date Picker/Form Elements]
-2. Change color after select an option [Select Element/Form Elements].
-3. Make it functional [Multiselect Dropdown/Form Elements].
-4. Make best value editable [Pricing Table One/Pricing Table].
-5. Rearrange Folder structure.
-
-### Version 1.2.0 - [Apr 28, 2023]
-
-- Add Typescript in TailAdmin React.
-
-### Version 1.0.0 - Initial Release - [Mar 13, 2023]
-
-- Initial release of TailAdmin React.
+| 任务 | 描述 |
+|------|------|
+| 任务一 | 工业数据可视化看板开发 |
+| 任务二 | RBAC 权限控制模块 |
+| 任务三 | AI 智能助手微模块 |
+| 任务四 | 自动化回归测试 |
 
 ## License
 
-TailAdmin React.js Free Version is released under the MIT License.
-
-## Support
-
-If you find this project helpful, please consider giving it a star on GitHub. Your support helps us continue developing
-and maintaining this template.
+MIT License
