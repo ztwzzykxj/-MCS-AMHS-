@@ -167,4 +167,16 @@ public class JwtTokenUtil {
         }
         return false;
     }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
+    public void setExpiration(Long expiration) {
+        this.expiration = expiration;
+    }
+
+    public void setTokenHead(String tokenHead) {
+        this.tokenHead = tokenHead;
+    }
 }

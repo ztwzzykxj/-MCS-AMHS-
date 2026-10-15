@@ -2,6 +2,7 @@ package com.macro.mall.tiny.security.config;
 
 import com.macro.mall.tiny.security.component.*;
 import com.macro.mall.tiny.security.util.JwtTokenUtil;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -25,9 +26,20 @@ public class CommonSecurityConfig {
         return new IgnoreUrlsConfig();
     }
 
+    @Value("${jwt.secret}")
+    private String jwtSecret;
+    @Value("${jwt.expiration}")
+    private Long jwtExpiration;
+    @Value("${jwt.tokenHead}")
+    private String jwtTokenHead;
+
     @Bean
     public JwtTokenUtil jwtTokenUtil() {
-        return new JwtTokenUtil();
+        JwtTokenUtil jwtTokenUtil = new JwtTokenUtil();
+        jwtTokenUtil.setSecret(jwtSecret);
+        jwtTokenUtil.setExpiration(jwtExpiration);
+        jwtTokenUtil.setTokenHead(jwtTokenHead);
+        return jwtTokenUtil;
     }
 
     @Bean
